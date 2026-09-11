@@ -71,10 +71,8 @@ function updateMoodUI(phase) {
     5: "DEFCON 1: RUN"
   };
 
-  // Fade Out
   img.classList.add("fade-out");
 
-  // Swap Source and Fade Back In after 250ms
   setTimeout(() => {
     img.src = chrome.runtime.getURL(`phase${phase}.png`);
     label.innerText = labels[phase];
@@ -82,38 +80,55 @@ function updateMoodUI(phase) {
   }, 250);
 }
 
-function getLatestIncomingMessage() {
-  // Target incoming message wrappers dynamically regardless of obfuscated classes
-  const incomingMessages = document.querySelectorAll('div[class*="message-in"]');
-  if (incomingMessages.length > 0) {
-    const lastMsg = incomingMessages[incomingMessages.length - 1];
-    return lastMsg.innerText;
-  }
+function checkLatestMessage() {
+  // 1. Locate the main chat conversation panel specifically
+  const mainPanel = document.querySelector('#main');
+  if (!mainPanel) return;
 
-  // Fallback to text span selectors inside WhatsApp Web
-  const selectableSpans = document.querySelectorAll('span._ao3e, span.selectable-text, div._am3n');
-  if (selectableSpans.length > 0) {
-    return selectableSpans[selectableSpans.length - 1].innerText;
-  }
+  // 2. Select all text spans inside #main, excluding the input footer
+  const allSpans = Array.from(mainPanel.querySelectorAll('span'));
+  if (allSpans.length === 0) return;
 
-  return "";
+  const chatBounds = mainPanel.getBoundingClientRect();
+  const chatMidpoint = chatBounds.left + (chatBounds.width / 2);
+
+  // Scan backwards starting from the bottom of the conversation
+  for (let i = allSpans.length - 1; i >= 0; i--) {
+    const span = allSpans[i];
+
+    // IGNORE any span inside the input footer or reply box
+    if (span.closest('footer') || span.closest('div[contenteditable="true"]')) {
+      continue;
+    }
+
+    const text = span.innerText ? span.innerText.trim() : "";
+
+    // Ignore empty text, timestamps (e.g., 8:16 pm), or single status icons
+    if (text.length > 0 && !text.match(/^\d{1,2}:\d{2}(\s?[ap]m)?$/i)) {
+      const rect = span.getBoundingClientRect();
+
+      // Ensure the element is actually visible on screen inside the chat
+      if (rect.width > 0 && rect.height > 0) {
+        
+        // Incoming messages sit on the LEFT half of #main
+        // Outgoing messages sit on the RIGHT half of #main
+        const isIncoming = rect.left < chatMidpoint && rect.left > chatBounds.left;
+
+        if (isIncoming) {
+          const phase = evaluatePhase(text);
+          updateMoodUI(phase);
+          break; // Found the latest incoming message from her!
+        }
+      }
+    }
+  }
 }
 
-function observeWhatsApp() {
-  const observer = new MutationObserver(() => {
-    const lastText = getLatestIncomingMessage();
-    if (lastText) {
-      const phase = evaluatePhase(lastText);
-      updateMoodUI(phase);
-    }
-  });
-
-  observer.observe(document.body, { childList: true, subtree: true });
+function init() {
+  createWidget();
+  setInterval(checkLatestMessage, 1000);
 }
 
 window.addEventListener("load", () => {
-  setTimeout(() => {
-    createWidget();
-    observeWhatsApp();
-  }, 3000);
+  setTimeout(init, 3000);
 });
