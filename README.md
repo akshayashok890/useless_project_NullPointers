@@ -2,39 +2,32 @@
 
 
 
-# [Project Name] 🎯
+# Girlfriend Becoming Uncanny 🎯
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: Null Pointers
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: Akshay Ashok - NSS College Of Engineering, Palakkad
+- Member 2: Adhithya K B - NSS College Of Engineering, Palakkad
 
 ### Project Description
-[2-3 lines about what your project does]
+A Chrome extension for WhatsApp Web that displays a real-time "Mr. Incredible Becoming Uncanny" visual indicator reflecting the sentiment of incoming messages from your partner.
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+Text messages lack tone of voice, making it impossible to know if a simple "k" or "fine" means everything is okay or if you should start looking for emergency shelter immediately.
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+A geometric DOM-scraping extension that evaluates incoming WhatsApp message sentiment and visually morphs Mr. Incredible through 5 levels of distress—from Phase 1 (Happy) to Phase 5 (DEFCON 1 Crisis)—right inside your browser tab.
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
-
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+- Languages: JavaScript, HTML5, CSS3
+- APIs/Frameworks: Chrome Extension APIs (Manifest v3)
+- Methods/Algorithms: Geometric Layout Bounding (`getBoundingClientRect`), Real-time DOM Querying, Keyphrase Pattern Matching Dictionary
 
 ### Implementation
 For Software:
