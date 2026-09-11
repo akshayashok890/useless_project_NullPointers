@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "WhatsApp Mood Analyzer - Uncanny Edition",
+  "version": "1.0",
+  "description": "Analyzes chat tone on WhatsApp Web and updates Mr. Incredible uncanny state.",
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "phase1.png",
+        "phase2.png",
+        "phase3.png",
+        "phase4.png",
+        "phase5.png"
+      ],
+      "matches": ["https://web.whatsapp.com/*"]
+    }
+  ]
+}
