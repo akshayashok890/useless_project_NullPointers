@@ -72,7 +72,7 @@ const MOOD_PHRASES = {
 
   phase5: [
     // Original core
-    "we need to talk", "who is she", "answer your phone", "where are you",
+    "we need to talk", "who is she", "answer your phone", "where are you","let's break up","let's take a break",
     "call me right now", "is this a joke", "i'm done", "we are done",
     // Expanded DEFCON 1 / Relationship Threats
     "we're done", "were done", "it's over", "its over", "pack your stuff",
