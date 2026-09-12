@@ -32,59 +32,38 @@ For Software:
 ### Implementation
 For Software:
 # Installation
-[commands]
-
-# Run
-[commands]
+1. **Clone or Download the Repository:**
+   git clone [https://github.com/your-username/girlfriend-becoming-uncanny.git](https://github.com/your-username/girlfriend-becoming-uncanny.git)
+2. **Open Chrome Extension Management:**
+        In Google Chrome, go to chrome://extensions/
+        Enable Developer mode using the toggle switch in the top-right corner.
+3. **Load the Unpacked Extension:**
+        Click Load unpacked in the top-left corner.
+        Select the directory containing manifest.json, content.js, and the phase*.png assets
 
 ### Project Documentation
-For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+Happy Phase: "Living in blissful ignorance — zero red flags detected."
+<img src="Happy.png" />
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+Neutral Phase: "Standard logistical banter — all systems normal."
+<img src="Neutral.png" />
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+Cold Phase: "She sent 'k.' — emergency protocols initiated."
+<img src="ColdNeutral.png" />
 
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
+Angry Phase: "Distress level critical — drop everything and apologize."
+<img src="Angry.png" />
 
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
+DEFCON1 Run Phase: "DEFCON 1: Delete game, pack bags, answer immediately."
+<img src="DEFCON1_run.png" />
 
 ### Project Demo
 # Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
+https://drive.google.com/file/d/1OpPDwPoOsIMSKhI5DDjTMPa4989cmpVs/view?usp=sharing
 
-# Additional Demos
-[Add any extra demo materials/links]
-
-## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+Girlfriend Becoming Uncanny is a local Chrome extension for WhatsApp Web that decodes the hidden tone of incoming messages in real time. Using DOM-scraping and an offline keyphrase engine, it dynamically morphs a floating Mr. Incredible widget through 5 levels of distress—from Phase 1 (Happy) all the way to Phase 5 (DEFCON 1 Crisis)—giving you an immediate visual warning when a simple "k" actually means trouble. Built for TinkerHub Useless Projects 3.0 by Team Null Pointers.
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 

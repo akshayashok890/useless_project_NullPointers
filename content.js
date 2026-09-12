@@ -55,7 +55,7 @@ const MOOD_PHRASES = {
   phase4: [
     // Original core
     "why", "stop", "leave me alone", "are you serious", "forget it",
-    "don't talk to me", "busy", "what do you want", "seriously", "ugh",
+    "don't talk to me", "busy", "what do you want", "seriously", "ugh","i hate you",
     // Expanded Anger & Frustration
     "shut up", "shut the fuck up", "stfu", "wtf", "what the hell", "what the fuck",
     "are u kidding me", "are you fucking serious", "ur annoying", "you're annoying",
