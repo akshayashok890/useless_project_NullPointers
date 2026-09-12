@@ -51,7 +51,7 @@ Neutral Phase: "Standard logistical banter — all systems normal."
 <img src="Neutral.png" />
 
 Cold Phase: "She sent 'k.' — emergency protocols initiated."
-<img src="ColdNeutral.png" />
+<img src="Cold_Passive.png" />
 
 Angry Phase: "Distress level critical — drop everything and apologize."
 <img src="Angry.png" />
