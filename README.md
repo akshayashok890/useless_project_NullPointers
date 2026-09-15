@@ -16,10 +16,10 @@
 ### Project Description
 A Chrome extension for WhatsApp Web that displays a real-time "Mr. Incredible Becoming Uncanny" visual indicator reflecting the sentiment of incoming messages from your partner.
 
-### The Problem (that doesn't exist)
+### The Problem 
 Text messages lack tone of voice, making it impossible to know if a simple "k" or "fine" means everything is okay or if you should start looking for emergency shelter immediately.
 
-### The Solution (that nobody asked for)
+### The Solution 
 A geometric DOM-scraping extension that evaluates incoming WhatsApp message sentiment and visually morphs Mr. Incredible through 5 levels of distress—from Phase 1 (Happy) to Phase 5 (DEFCON 1 Crisis)—right inside your browser tab.
 
 ## Technical Details
@@ -43,7 +43,7 @@ For Software:
 
 ### Project Documentation
 
-# Screenshots (Add at least 3)
+# Screenshots
 Happy Phase: "Living in blissful ignorance — zero red flags detected."
 <img src="Happy.png" />
 
